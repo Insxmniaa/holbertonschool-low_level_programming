@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
-*
-* main - Prints "_putchar" followed by a new line.
-*
-* Return: Always 0.
-*/
+ * main - Prints "_putchar" followed by a new line.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
         putchar('_');
@@ -17,6 +16,7 @@ int main(void)
         putchar('h');
         putchar('a');
         putchar('r');
+        putchar('\n');
 
         return (0);
 }
