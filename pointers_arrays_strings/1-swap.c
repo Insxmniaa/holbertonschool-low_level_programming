@@ -2,7 +2,6 @@
 
 /**
  * swap_int - writes a function that swaps the value of two integers.
- *
  * @a: The first interger swapped. 
  * @b: The second interger to be swapped
  */
