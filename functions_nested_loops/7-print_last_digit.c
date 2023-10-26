@@ -1,26 +1,28 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * print_last_digit - prints the last digit of a number
+ *puts_half - function that prints half of a string, followed by a new line.
  *
- * @n: the int to extract the last digit from
- *
- * Return: value of the last digit
- *
+ *@str: This is the input string
  */
-int print_last_digit(int n)
+void puts_half(char *str)
 {
-	int a;
+	int index, half;
 
-	if (n < 0)
-		n = -n;
+	index = 0;
+	while (str[index] != '\0')
+		index++;
 
-	a = n % 10;
+	half = index / 2;
 
-	if (a < 0)
-		a = -a;
+	if (index % 2 == 1)
+		half++;
 
-	putchar(a + '0');
-
-	return (a);
+	while (half < index)
+	{
+		putchar(str[half]);
+		half++;
+	}
+	putchar('\n');
 }

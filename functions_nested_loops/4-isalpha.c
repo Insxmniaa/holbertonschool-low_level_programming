@@ -1,13 +1,20 @@
 #include "main.h"
-/**
- * _isalpha - Checks for alphabetic order
- *
- * @c: alpabet to check for
- *
- * Return: 1 if c is a letter, 0 otherwise
- */
-int _isalpha(int c)
-{
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+#include <stdio.h>
 
+/**
+ * print_rev - This function prints a reverse string
+ *
+ * @s: This is the input string
+ */
+void print_rev(char *s)
+{
+	int index;
+
+	for (index = 0; s[index] != '\0'; index++)
+		;
+	for (index = index - 1; s[index] != '\0'; index--)
+	{
+		putchar(s[index]);
+	}
+	putchar('\n');
 }

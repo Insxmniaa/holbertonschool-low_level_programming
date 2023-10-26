@@ -1,17 +1,25 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _abs - computes the absolute value of an integrer
+ * puts2 - Write a function that prints every other character of a string, 
+ *         starting with the first character, followed by a new line.
  *
- * @n: the int to check
+ * @s: This pointer point to a char or string
  *
- * Return: the absolute value of int
  *
  */
-int _abs(int n)
+
+void puts2(char *s)
 {
-	if (n >= 0)
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		return (n);
+		if (a % 2 == 0)
+		{
+			putchar(s[a]);
+		}
 	}
-	return (-n);
+	putchar('\n');
 }

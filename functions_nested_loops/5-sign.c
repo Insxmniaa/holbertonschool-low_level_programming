@@ -1,31 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_sign - prints the sign of a numver
+ * rev_string - This fuction print a string reverser
  *
- * @n: the int to check
- *
- * Return: 1 and prints + if n is greater than zero
- *
- * 0 and prints 0 if n is zero
- *
- * -1 and prints - if n is less than zero
+ *@s: this is the pointer that point to a string
  */
-int print_sign(int n)
+
+void rev_string(char *s)
 {
-	if (n > 0)
+	int a, len;
+
+	char *begin, *end = s;
+
+	for (a = 0; s[a] != '\0' && s[a + 1] != '\0'; a++)
 	{
-		putchar('+');
-		return (1);
+		end++;
 	}
-	else if (n == 0)
+	len = a + 1;
+	begin = s;
+	for (a = 0; a < len / 2; a++)
 	{
-		putchar(48);
-		return (0);
+		char x;
+		x = *end;
+		*end = *begin;
+		*begin = x;
+		begin++;
+		end--;
 	}
-	else if (n < 0)
-	{
-		putchar('-');
-	}
-	return (-1);
+	end[len + 1] = '\0';
 }

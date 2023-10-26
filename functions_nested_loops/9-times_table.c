@@ -1,42 +1,22 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * times_table - check description
- * Description: It prints 9 times table starting with 0
- * Return: Nothing.
+ * _strcpy - Copiar el contenido de uno a otra variable
+ * @dest: This is destiny
+ * @src: This is the copia
+ *
+ * Return: This return copy
  */
-void times_table(void)
+char *_strcpy(char *dest, char *src)
 {
-	int i, j, n;
+	char *start = dest;
 
-	for (i = 0; i <= 9; i++)
+	while (*src != '\0')
 	{
-		for (j = 0; j <= 9; j++)
-		{
-			n = i * j;
-
-			if ((n / 10) == 0)
-			{
-				if (j != 0)
-					putchar(' ');
-				putchar(n + '0');
-
-				if (j == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-			else
-			{
-				putchar((n / 10) + '0');
-				putchar((n % 10) + '0');
-				if (j == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-		}
-		putchar('\n');
+		*dest = *src;
+		dest++;
+		src++;
 	}
+	*dest = '\0';
+	return (start);
 }
