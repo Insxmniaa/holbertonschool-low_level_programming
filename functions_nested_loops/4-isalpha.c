@@ -1,20 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * print_rev - This function prints a reverse string
- *
- * @s: This is the input string
- */
-void print_rev(char *s)
+*_isalpha - controls if a character is alphabetical
+*@c: character to be verified
+*Return: return 0 or 1
+*/
+int _isalpha(int c)
 {
-	int index;
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+return (1);
 
-	for (index = 0; s[index] != '\0'; index++)
-		;
-	for (index = index - 1; s[index] != '\0'; index--)
-	{
-		putchar(s[index]);
-	}
-	putchar('\n');
+return (0);
 }
