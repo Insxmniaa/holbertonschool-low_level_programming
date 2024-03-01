@@ -22,13 +22,13 @@ char *_strstr(char *haystack, char *needle)
 			tempNeedle = needle;
 			while (*tempNeedle) /* check if match */
 			{
-				if (*haystack++ != *tempNeedle++)	
+				if (*haystack++ != *tempNeedle++)
 				{ /* not a match, reset pointer to first occurance */
 					haystack = occurance;
 					break;
 				}
 			}
-			if (occurance != haystack) /* didn't reset, found match */			
+			if (occurance != haystack) /* didn't reset, found match */
 				return (occurance);
 		}
 		haystack++;
