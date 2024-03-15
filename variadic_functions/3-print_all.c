@@ -81,8 +81,8 @@ void print_all(const char * const format, ...)
 		{
 			if (notfirst)
 				printf(", ");
-			notfirst = 1;
-			
+			notfirst = -1;
+
 			key[keyind].f(list);
 			ptr++;
 			keyind = -1;
