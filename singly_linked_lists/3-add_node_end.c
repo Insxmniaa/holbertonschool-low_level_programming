@@ -9,7 +9,7 @@
  *
  * str needs to be duplicated.
  * You are allowed to use strdup.
- * 
+ *
  * Return: The address of the new element or NULL if it failed.
  *
  */
@@ -20,7 +20,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
-	{						
+	{
 		return (NULL);
 	}
 	while (str[length])
@@ -40,7 +40,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		last = *head;
 
 		while (last->next)
-		{													
+		{
 			last = last->next;
 		}
 		last->next = new_node;
