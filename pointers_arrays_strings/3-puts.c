@@ -1,16 +1,16 @@
 #include "main.h"
+
 /**
- * _puts - function with one argument
- * @str: one char type argument
- * Return: none
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
  */
 void _puts(char *str)
 {
+	int i;
 
-
-	for (int i = 0; i < strlen(str); i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
